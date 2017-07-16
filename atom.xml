@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>FairyL|姑娘。秦子洛</title>
+  <subtitle>自我管理、web前端设计、UI设计、读书笔记分享</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://fairyL.com/"/>
+  <updated>2017-07-16T10:47:40.321Z</updated>
+  <id>http://fairyL.com/</id>
+  
+  <author>
+    <name>fairy</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你所做的每件事都会有收获</title>
+    <link href="http://fairyL.com/2017/07/16/undefined-title/"/>
+    <id>http://fairyL.com/2017/07/16/undefined-title/</id>
+    <published>2017-07-16T10:41:39.000Z</published>
+    <updated>2017-07-16T10:47:40.321Z</updated>
+    
+    <content type="html"><![CDATA[<p>你好。我来了。<br>最近手里做的一个比赛<br>与我一起做比赛的那个人就是挂名<br>什么事情都不做<br>小仙女就炒鸡特别生气</p>
+<p><hr><br>人生本来就是不公平的吖<br>你要明白<br>一切的一切都注定了<br>每次做一件事情<br>收获都特别多<br>看着老师超级认真的样子<br>我也很开心<br>庆幸碰到了她<br>虽然严格<br>但是一直很负责、很认真<br>很喜欢这种老师<br>有时候气的想怼人<br>但是经历过后感觉也就那样<br>今天下午交稿之后<br>整个人都放松了<br>行进的脚步都很舒服</p>
+<p><hr><br>做事情一定要细心<br>图表、文字的格式排版<br>都要一致<br>细节决定成败<br>记着每一天都要努力去生活</p>
+<hr>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;你好。我来了。&lt;br&gt;最近手里做的一个比赛&lt;br&gt;与我一起做比赛的那个人就是挂名&lt;br&gt;什么事情都不做&lt;br&gt;小仙女就炒鸡特别生气&lt;/p&gt;
+&lt;p&gt;&lt;hr&gt;&lt;br&gt;人生本来就是不公平的吖&lt;br&gt;你要明白&lt;br&gt;一切的一切都注定了&lt;br&gt;每次做一件事情&lt;br&gt;收获都特别多&lt;br
+    
+    </summary>
+    
+      <category term="心情随记" scheme="http://fairyL.com/categories/%E5%BF%83%E6%83%85%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+      <category term="关于我" scheme="http://fairyL.com/tags/%E5%85%B3%E4%BA%8E%E6%88%91/"/>
+    
+  </entry>
+  
+</feed>
