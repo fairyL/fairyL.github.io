@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="linux," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.html" title="FairyL|姑娘。秦子洛" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="一、入门基础1.linux之父：李纳斯.托瓦茨2.linux是一个基于POSIX和UNIX的多用户、多任务、支持多线程和多CPU的操作系统。3.Linux的设计思想是以网络为核心。4.服务器使用LAMP(Linux+Apache+Mysql+php)和LNMP(linux+Nginx+Mysql+php)组合。5.Linux的安装：我是在linux官方社区找到Ubuntu安装版本，安装在VMwar">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux基础">
+<meta property="og:url" content="http://fairyL.com/2017/11/05/undefined-title/index.html">
+<meta property="og:site_name" content="FairyL|姑娘。秦子洛">
+<meta property="og:description" content="一、入门基础1.linux之父：李纳斯.托瓦茨2.linux是一个基于POSIX和UNIX的多用户、多任务、支持多线程和多CPU的操作系统。3.Linux的设计思想是以网络为核心。4.服务器使用LAMP(Linux+Apache+Mysql+php)和LNMP(linux+Nginx+Mysql+php)组合。5.Linux的安装：我是在linux官方社区找到Ubuntu安装版本，安装在VMwar">
+<meta property="og:updated_time" content="2017-11-05T11:52:34.840Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux基础">
+<meta name="twitter:description" content="一、入门基础1.linux之父：李纳斯.托瓦茨2.linux是一个基于POSIX和UNIX的多用户、多任务、支持多线程和多CPU的操作系统。3.Linux的设计思想是以网络为核心。4.服务器使用LAMP(Linux+Apache+Mysql+php)和LNMP(linux+Nginx+Mysql+php)组合。5.Linux的安装：我是在linux官方社区找到Ubuntu安装版本，安装在VMwar">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://fairyL.com/2017/11/05/undefined-title/"/>
+
+
+
+
+
+  <title>linux基础 | FairyL|姑娘。秦子洛</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">FairyL|姑娘。秦子洛</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">自我管理、web前端设计、UI设计、读书笔记分享</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://fairyL.com/2017/11/05/undefined-title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fairy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/27674926?v=3&u=3c9090d349210415f2868f35d7f27e5c0c0bcd41&s=400">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FairyL|姑娘。秦子洛">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">linux基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-05T19:51:00+08:00">
+                2017-11-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  4,826
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  18
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一、入门基础"><a href="#一、入门基础" class="headerlink" title="一、入门基础"></a>一、入门基础</h2><p>1.linux之父：李纳斯.托瓦茨<br>2.linux是一个基于POSIX和UNIX的多用户、多任务、支持多线程和多CPU的操作系统。<br>3.Linux的设计思想是以网络为核心。<br>4.服务器使用LAMP(Linux+Apache+Mysql+php)和LNMP(linux+Nginx+Mysql+php)组合。<br>5.Linux的安装：<br>我是在linux官方社区找到Ubuntu安装版本，安装在VMware虚拟机上的。<br>6.在终端中输入ls /会显示系统目录结构。<br>bin：存放着最经常使用的命令。<br>boot:存放这启动Linux时使用的一些核心文件，包括连接文件以及镜像文件。<br>etc:存放所有的系统管理所需要的配置文件和子目录。<br>home:用户的主目录。<br>lib:存放着系统最基本的动态连接共享库。<br>lost+found:一般情况下是空的，当系统非法关机后，会存放一些文件。<br>media：Linux会把识别的设备挂载到这个目录下面。<br>mnt:该目录是为了用户临时挂载别的文件系统的。<br>opt:给主机额外安装软件所摆放的目录。<br>proc:是一个虚拟目录，是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。<br>tips:这个目录的内容不在硬盘上而在内存里。<br>root:该目录为系统管理员。<br>sbin:存放的是系统管理员使用的系统管理程序。<br>selinux:安全机制。<br>srv:存放一些服务启动之后需要提取的数据。<br>sys:文件系统sysfs<br>其继承了下面三种文件系统的信息：针对进程信息的proc文件系统、针对设备的devfs文件系统以及针对伪终端的devpt文件系统。<br>tmp:存放临时文件。<br>usr:用户的很多应用程序和文件都存放在此目录。相当于windows中的program files目录。<br>usr/bin:系统用户使用的应用程序。<br>usr/sbin:超级用户使用的比较高级的管理程序和系统守护程序。<br>usr/src:内核源代码默认的放置目录。<br>/var：经常被修改的目录放在这个目录下。<br>注意：/bin,/usr/bin是给系统用户使用的指令。<br>    /sbin,/usr/sbin则是root使用的指令。 </p>
+<h2 id="二、shell编程"><a href="#二、shell编程" class="headerlink" title="二、shell编程"></a>二、shell编程</h2><p>1.分类：cli命令行和GUI图形用户界面。<br>2.bash:<br>提示符：#用根用户。 $普通用户<br>命令组成：命令、选项、参数。<br>3.切换到root用户下使用：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~<span class="variable">$ </span>su -</div></pre></td></tr></table></figure></p>
+<p>加- 是切换到一个新的终端<br>sudo 使用管理员用户身份运行命令<br>显示当前用户信息：id’<br>修改当前用户密码：passwd<br>4.查看主机名：hostname<br>5.列出当前目录下的所有文件：ls<br>6.返回内核版本号：uname -r<br>7.通过tab键自动简化执行；</p>
+<p><1>可以自动补全命令；</1></p>
+<p><2>可以自动补全文件名。<br>8.历史记录：通过上下键来浏览曾经执行过的命令，或者history。<br>！！重复前一个命令<br>！+字符 重复前一个以“字符”开头的命令<br>！num 按照历史记录的序号执行命令<br>！？abc 重复之前包含abc的命令<br>！-n 重复n个命令之前的那个命令<br>9.通配符：<br>*匹配零个或多个<br>？匹配任意一个字符<br>[0-9]匹配一个数字范围<br>[abc]匹配列表里任何字符<br>[^abc]匹配列表以外字符<br>10.作业管理<br>在后台运行进程：命令后添加&amp;<br>暂停某个程序：ctrl+z<br>管理后台作业：<br>jobs 查看所有后台作业<br>bg 让程序在后台继续运行<br>fg 把一个程序拉到前台 </2></p>
+<h2 id="三、Linux文件系统结构"><a href="#三、Linux文件系统结构" class="headerlink" title="三、Linux文件系统结构"></a>三、Linux文件系统结构</h2><p>1.Linux文件系统是一个倒转的单根树状结构。<br>2.根为“/”<br>3.文件系统严格区分大小写。<br>4.路径使用”/“分割。<br>&lt;一&gt;当前工作目录<br> 每一个shell或系统进程都有一个当前工作目录。<br> 使用pwd命令可以显示当前工作目录。<br>&lt;二&gt;文件名称（文件和文件夹没有区别）<br> 文件的名称大小写敏感。<br> 名称最多可以为255个字符。<br> 除了正斜线外，都是有效字符。<br> 通过touch命令可以创建一个空白文件或者更新已有文件的时间。<br> 以”.”开头的文件为隐藏文件<br>&lt;三&gt;列出目录内容<br> ls命令用来列出目录内容<br> 相关参数：<br> ls -a 显示所有文件（包括隐藏文件）<br> ls -l 显示详细信息<br> ls -R 递归显示子目录结构<br> ls -ld 显示目录和链接信息<br> 四、查看文件的类型:file命令<br> 五、绝对路径与相对路径：<br> 绝对路径：以“/”开头，递归每级目录直到目标的路径。（不受当前所在工作目录限制）<br> 相对路径：以当前目录为起点，到达目标的路径。（受当前所在目录限制）<br> Cd命令可以用来切换目录。<br> 上一级目录“..”<br> 当前目录“.”<br> 用户家目录“~”<br> 上一个工作目录“-”</p>
+<h2 id="四、Linux系统基础"><a href="#四、Linux系统基础" class="headerlink" title="四、Linux系统基础"></a>四、Linux系统基础</h2><p>&lt;一&gt;复制文件、目录<br> 使用cp命令复制文件或目录<br> cp 源文件 目标文件<br> 常用参数：<br> -r 递归复制整个目录树<br> -v 显示详细信息<br> 二、移动、重命名文件或目录:mv<br> mv 文件 目标目录<br> 如果指定文件名，则可以重命名文件。<br>&lt;二&gt;创建、删除文件<br> 创建：touch<br> 删除：rm]<br> 常用参数：<br> -i 交互式<br> -r 递归的删除包括目录中的所有内容<br> -f 强制删除，没有警告提示。<br>&lt;三&gt;创建、删除目录<br> 通过mkdir创建一个目录<br> 通过mrdir删除一个目录，不能删除非空文件夹。<br> 通过rm -r（-f）删除一个非空目录。</p>
+<h2 id="五、Linux系统基础之常用命令"><a href="#五、Linux系统基础之常用命令" class="headerlink" title="五、Linux系统基础之常用命令"></a>五、Linux系统基础之常用命令</h2><p>&lt;一&gt;日期时间<br> data: 查看、设置当前系统时间<br> 格式化显示时间：<br> +%y–%m–%d<br> hwclock(clock)用以显示硬件时钟时间<br> cal 查看日历<br> uptime 查看系统运行时间和负载<br>&lt;二&gt;输出、查看命令<br> echo 用以显示输入内容<br> cat 用以显示文件内容<br> more 用于翻页显示文件内容（只能向下翻页）<br> less 用于翻页显示文件内容（带上下翻页）<br> head 用以显示文件的头几行（默认10行）<br> -n可以指定显示的行数<br> tail用以显示文件的末尾几行（默认10行）<br> -n 指定显示行数<br> -f 追踪显示文件更新<br>&lt;三&gt;查看硬件信息<br> lspci查看pci设备<br> -v查看详细信息<br> lsusb查看USB设备<br> lsmod查看加载的模块（驱动程序）<br>&lt;四&gt;关机、重启<br> shutdown关机、重启计算机<br> 格式：shutdown[关机、重启]时间<br> 参数：-h 关闭计算机<br>       -r 重新启动<br> poweroff立即关闭计算机<br> reboot立即重启计算机<br>&lt;五&gt;归档、压缩<br>zip:用以压缩文件<br>zip 压缩文件名.zip 被压缩文件名<br>unzip:用以解压缩文件<br>unzip 压缩文件名.zip<br>gzip:用以压缩文件<br>gzip 压缩文件名<br>tar:用以归档文件<br>tar -cvf 归档文件名.tar 文件名<br>tar -xvf 解开归档文件名.tar<br>tar -cvzf  文件名.tar.gz 文件名<br>（归档并压缩，是目前最常用的。）<br>&lt;六&gt;查找<br>locate快速查找<br>(此命令需要预先建立数据库，默认每天更新一次，可以用updatedb手工建立、更新数据库。)<br>tips：<br>在使用updatedb时有时会出现下面的错误updatedb: can not open a temporary file for `/var/lib/mlocate/mlocate.db’。<br>这是因为权限不够，我们要切换到root用户下，然后再updatedb就可以了。</p>
+<p>find 用以高级查找文件、文件夹<br>find 查找位置 查找参数<br>例如：<br>根据文件名或者后缀名查找：<br>find -name <em>linuxcast</em><br>find / -name <em>.conf<br>根据权限查找：<br>find /-perm 777<br>根据目录查找：<br>find / -type d<br>find .-name “a</em>“ -exec ls -l{}\<br>把所有找出的以a开头的文件结果当成结果传递给ls -l{} \;<br>find -user/-group 查找属于某个特定用户/组的文件<br>find -ctime基于修改时间查找文件<br>find -size基于文件大小<br>&lt;七&gt;vi、vim编辑器<br>Ubuntu 默认是没有安装vim的。在输入vim时会出现：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">The program <span class="string">'vim'</span> can <span class="keyword">be</span> found in the following package<span class="variable">s:</span></div><div class="line"> * <span class="keyword">vim</span></div><div class="line"> * <span class="keyword">vim</span>-gnome</div><div class="line"> * <span class="keyword">vim</span>-tiny</div><div class="line"> * <span class="keyword">vim</span>-athena</div><div class="line"> * <span class="keyword">vim</span>-gtk</div><div class="line"> * <span class="keyword">vim</span>-nox</div><div class="line">Try: sudo apt-<span class="built_in">get</span> install &lt;selected package&gt;</div></pre></td></tr></table></figure></p>
+<p>解决办法是：<br>在命令行输入：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="builtin-name">get</span> install vim</div></pre></td></tr></table></figure></p>
+<p>1.vim:启动vim编辑器<br>vim+目标文件路径<br>2.vim三种模式：<br>命令模式（常规模式）<br>vim启动后，默认进入命令模式。任何模式都可以通过esc键回到命令模式。在此模式下可以完成选择、复制、粘贴、撤销等操作。<br>常用命令：<br>i 在光标前插入文本<br>o 在当前行的下面插入新行<br>dd 删除整行<br>yy 将当前行的内容放入缓冲区（复制当前行）<br>n+yy 将n行的内容放入缓冲区<br>p 将缓冲区中的文本放入光标后（粘贴）<br>u 撤销上一个操作<br>r 替换当前字符<br>/ 查找关键字：<br>/xxx 往下查找<br>?xxx 往上<br>n    下一个<br>:set hls 打开高亮<br>:set nohls 关闭高亮</p>
+<p>插入模式：<br>在命令模式中按i键进入插入模式。</p>
+<p>ex模式：<br>在命令模式下按 : 键可以进入。</p>
+<p>常用命令：<br>：w 保存当前修改<br>：q 退出<br>：q! 强制退出，不保存修改。<br>：x 保存并退出，相当于：wq<br>:set number 显示行号<br>：！系统命令  执行一个系统命令并显示结果<br>：sh 切换到命令行，使用ctrl+d切换回vim.<br>&lt;八&gt;磁盘基本概念<br>1.基本概念:linder柱面、sector扇区、head磁头。<br>2.Linux所有设备都被抽象为一个文件，保存在/dev目录下。<br>3.设备名称一般为：hd[a-z]或sd<a href="[a-z]为分区号">a-z</a>。<br>4.IDE设备名称为hd[a-z]、SATA、SCSI、SAS、USB等设备。<br>5.分区概念：<br>（1）将一个磁盘逻辑的分为几个区，每个区当做独立磁盘，以方便使用管理。<br>（2）不同分区用：设备名称+分区号<br>（3）主流分区机制为：MBR和GPT。<br>（4）MBR主引导机制：应用于绝大多数使用BIOS的PC设备。<br>（5）特点：<br>支持32bit和64bit系统。<br>支持分区数量有限。<br>只支持不超过2T的硬盘。<br>只占用了512bit.<br>（6）主分区：最多只能创建四个主分区。<br>（7）扩展分区：一个扩展分区会占用一个主分区位置。<br>（8）逻辑分区：Linux最多支持63个IDE分区和15个SCSI分区。<br>（9）GPT的特点：<br>支持超过2T的磁盘。<br>向后兼容MBR。<br>必须在支持UEFI的硬件上才能使用。<br>必须使用64bit系统。<br>Mac、Linux系统都能支持GPT分区格式。<br>（10）FDISK分区工具：基于MBR分区工具。<br>（11）fdisk命令只有具有超级用户权限才能够运行。<br>（12）使用fdisk -l可以列出所有安装的磁盘及其分区信息<br>（13）fdisk/dev/sda可以对目标磁盘进行分区操作。<br>（14）partprobe命令让内核更新分区信息，否则需要重启才能识别新的分区。<br>（15）/proc/part itions文件也可以用来查看分区信息<br>6.文件系统<br>（1）定义：操作系统通过文件系统管理文件及数据，磁盘或区分需要创建文件系统之后才能够为操作系统使用，创建文件系统的过程又称为格式化。<br>（2）没有文件系统的设备成为裸（raw）设备。<br>（3）常见的文件系统有（用于windows）FAT32、 NTFS 、(用于Linux)EXT2、 EXT3、 EXT4、 XFS、 HFS等。<br>（4）文件系统之间的区别：日志、支持的分区大小、支持的单个文件大小、性能等。<br>（5）mke2fs用来创建文件系统。<br>（6）mke2fs -t 文件系统类型 要创建的硬盘系统分区<br>常用参数：<br>-b blocksize 指定文件系统块大小<br>-c 建立文件系统时检查坏损块<br>-L label 指定卷标<br>-j 建立文件系统日志<br>（7）mkfs：用于创建文件系统，但支撑参数少。<br>（8）dumpe2fs 查看分区的文件系统详细信息<br>（9）journal日志<br>（10）带日志的文件系统（ext3/ext4）拥有较强的稳定性，在出现错误时可以进行恢复。<br>（11）在使用带日志的文件系统中，会使用一个叫做“两阶段提交”的方式进行磁盘操作。当进行磁盘操作时，文件系统进行以下操作：</p>
+<p><1>文件系统将准备执行的事务具体内容写入日志；</1></p>
+<p><2>文件系统进行操作；</2></p>
+<p><3>操作成功后，将事务的具体内容从日志中删除。<br>(12)E2LABEL:为文件系统添加标签<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">e2label<span class="regexp">/dev/</span>sda2 显示sda2的系统标签</div><div class="line">e2label<span class="regexp">/dev/</span>sda2 LINUXCASAT 将sda2的系统标签设置为LIUNXCAST</div></pre></td></tr></table></figure></3></p>
+<p>(13)FSCK:用来检查并修复损坏的文件系统<br>fsck/dev/sda2<br>常用参数：<br>-y 不提示而直接进行修复<br>-t 指定文件系统同类<br>对于识别为文件的损坏数据，fsck会将该文件放入lost+found目录。<br>系统启动时会对磁盘进行fsck操作。<br>7.挂载、使用文件系统<br>（1）磁盘或分区创建好文件系统后，需要挂载到一个目录才能够使用。<br>（2）windows或mac系统会进行自动挂载，一旦创建好文件系统后会自动挂载到系统上，Windows上称之为c盘、D盘等。<br>（3）Linux需要手工进行挂载操作或配置系统进行自动挂载。<br>挂载目录为：/mnt<br>(4)mount：将格式化好的磁盘或分区挂载到一个目录上<br>mount /dev/sda1(要挂载的分区) /mnt（挂载点)/<br>常用参数：<br>-t 指定文件系统的类型<br>-o 制定挂载选项‘<br>    ro,rw 以只读或读写形式挂载，默认是rw.<br>    sync 代表不适用缓存，而是对所有操作直接写入磁盘<br>    async 代表使用缓存，默认是async<br>    noatime 代表每次访问文件时不更新文件的访问时间<br>    atime 代表每次访问文件时更新文件的访问时间<br>    remount 重新挂载文件系统<br>（5）umount:卸载已挂载的文件系统，相当于Windows中的弹出。<br>umount 文件系统挂载点<br>umount/dev/sda3 ==umount/mnt<br>如果出现device is busy报错，则表示该文件系统正在被使用，无法卸载，可以使用一下命令查看使用文件系统的进程：<br>fuser -m/mnt<br>也可使用命令lsof查看正在被使用的文件：<br>lsof/mnt<br>(6)自动挂载：配置文件/etc/fstab用来定义需要自动挂载的文件系统，<br>(7)Linux下如何获取帮助<br>help： –help 或-h<br>man： 将要获取帮助的命令作为参数运行<br>man -k 关键字 :可以用来查询包含该关键字的文档<br>info：以网页的形式显示<br>doc<br>8.用户、组<br>（1）用户是限制使用者或进程可以使用、不可以使用哪些资源。<br>（2）组用来方便组织管理用户。<br>（3）每个用户拥有一个UserID，操作系统使用的是用户ID，而非用户名。<br>（4）每个用户属于一个主组，属于一个或多个附属组。<br>（5）每个组拥有一个GroupID<br>（6）每个进程以一个用户身份运行，并受该用户可访问的资源限制。<br>（7）每个可登陆用户拥有一个指定的shell.<br>一、用户<br>1.用户ID为32位，从0开始，限制在60000以下。<br>2.用户分类：<br>root用户（ID为0）<br>系统用户（1-499）：没有shell，为某些服务而创建的。<br>普通用户（500以上）<br>3.系统中的文件都有一个所属用户及所属组。<br>4.使用id命令可以显示当前用户信息。<br>5.使用passwd可以修改用户密码<br>6.相关文件<br>/etc/passwd 保存用户信息<br>/etc/shadow 保存用户密码（加密的）<br>/etc/group 保存组信息<br>7.查看登录的用户<br>whoami 显示当前用户<br>who 显示有哪些用户已经登录系统<br>w 显示有哪些用户已登录并且在干什么<br>8.创建一个用户<br>useradd nash_su<br>这个命令会执行以下操作：<br>（1）在 /etc/passwd中添加用户信息<br>（2）如果使用passwd创建密码，则将密码保存在/etc/shadow中。<br>（3）为用户建立一个新的家目录/home/nash_su<br>(4)将/etc/skel中的文件复制到用户的家目录中<br>（5）建立一个与用户用户名相同的组，新建用户默认属于这个同名组<br>常用参数：<br>-d 家目录<br>-s 登录shell<br>-u userld<br>-g 主族<br>-G 附属组（最多31个，用“，”分割）<br>9.修改用户信息：<br>usermod 参数 username<br>常用参数：<br>-l 新用户名<br>-u 新userid<br>-d 用户家目录位置<br>-g 用户所属主组<br>-G 用户所属附属组<br>-L 锁定用户使其不能登录<br>-U 解除锁定</p>
+<ol>
+<li>删除用户：userdel<br>userdel nash_su(保留用户的家目录)<br>userdel -r nash_su（同时删除用户的家目录）<br>11.组：更方便的归类、管理用户。<br>创建、修改、删除组<br>12.权限<br>（1）定义：权限是操作系统用来限制对资源访问的机制。<br>权限一般分为读、写、执行。<br>每个文件都拥有特定的权限、所属用户及所属组，通过这样的机制起来限制 哪些用户、哪些组可以对特定文件进行什么样的操作。<br>每个进程都是以某个用户的身份运行，所以进程的权限与用户的权限一样，用户的权限大，该进程拥有的权限就大。<br>（2）目录必须拥有执行权限，否则无法查看内容。<br>（3）UGO模型：<br>Linux权限是基于UGO模型进行控制：<br>u代表User，G代表Group，O代表Other。<br>每一个文件的权限基于UGO进行设置。<br>权限三个一组（rwx），对应UGO分别设置。<br>每个文件拥有一个所属用户和所属组，对应UG,不属于该文件所属用户或所属组的使用O权限。<br>chown改变文件所属用户<br>chown nash_s fairyLqq<br>-R 参数递归的修改目录下的所有文件的所属用户<br>chgrp改变文件的所属组<br>chgrp nash_s fairyLqq<br>-R 参数递归的修改目录下的所有文件的所属组<br>（4）修改权限：<br>chmod 模式 文件<br>chmod u+rw fairyLqq<br>模式为如下格式：<br>u、g、o分别代表用户、组和其他<br>a可以代指ugo<br>+、-代表加入或删除对应权限<br>r、w、x代表三种权限<br>以数字方式修改权限，三个权限分别由三个数字表示：<br>r=4(2^2)<br>w=2(2^1)<br>x=1(2^0)<br>使用数字表示权限时，每组权限分别为对应数字之和：<br>rw=4+2=6<br>rwx=4+2+1=7<br>r-x=4+1=5<br>所以，使用数字表示UGO权限使用如下方式表示：<br>chmod 660 fairyLqq ==rw-rw—-</li>
+</ol>
+<p>备注：入门视频使用的nah_su的Linux基础，目前已到第十五课时，<br>地址：<a href="http://study.163.com/course/courseMain.htm?courseId=232007" target="_blank" rel="external">http://study.163.com/course/courseMain.htm?courseId=232007</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i>
+
+ linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/04/undefined-title/" rel="next" title="如果我爱你">
+                <i class="fa fa-chevron-left"></i> 如果我爱你
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/05/undefined-title/" rel="prev" title="CSS选择器">
+                CSS选择器 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars3.githubusercontent.com/u/27674926?v=3&u=3c9090d349210415f2868f35d7f27e5c0c0bcd41&s=400"
+               alt="fairy" />
+          <p class="site-author-name" itemprop="name">fairy</p>
+           
+              <p class="site-description motion-element" itemprop="description">自我管理、web前端设计、UI设计、读书笔记分享</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.html" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/fairyL" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.ximalaya.com/zhubo/12528594/" target="_blank" title="喜马拉雅">
+                  
+                    <i class="fa fa-fw fa-fa-play-circle-o"></i>
+                  
+                  喜马拉雅
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2929740455?is_all=1" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、入门基础"><span class="nav-number">1.</span> <span class="nav-text">一、入门基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、shell编程"><span class="nav-number">2.</span> <span class="nav-text">二、shell编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、Linux文件系统结构"><span class="nav-number">3.</span> <span class="nav-text">三、Linux文件系统结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、Linux系统基础"><span class="nav-number">4.</span> <span class="nav-text">四、Linux系统基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、Linux系统基础之常用命令"><span class="nav-number">5.</span> <span class="nav-text">五、Linux系统基础之常用命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">fairy</span>
+</div>
+
+
+<!--<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+-->
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共10.0k字</span>
+</div>
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
