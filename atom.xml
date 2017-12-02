@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fairyL.com/"/>
-  <updated>2017-11-05T11:59:21.120Z</updated>
+  <updated>2017-12-02T13:01:50.052Z</updated>
   <id>http://fairyL.com/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>心有猛虎，细嗅蔷薇</title>
+    <link href="http://fairyL.com/2017/12/02/undefined-title/"/>
+    <id>http://fairyL.com/2017/12/02/undefined-title/</id>
+    <published>2017-12-02T13:00:27.000Z</published>
+    <updated>2017-12-02T13:01:50.052Z</updated>
+    
+    <content type="html"><![CDATA[<p>chapter 1<br>关于近来的心情<br>一个人跟我说，你的善良要有锋芒。我思考了很久，的确如此。慢慢的变得越来越沉默，因为很少有人在一起说话了，人和人之间充满了利益感。心有猛虎，细嗅蔷薇。<br>那年，去了临楚话语中的洛阳，看了白马寺的牡丹。在那座城市，让我感受到了古都的氛围。让我记忆最深的是公交车女司机，在其他的地方真的很少见，她们人都很好。<br>上次从西安回家的时候，坐反站，差点都急哭，碰到一个叔叔他给我指路，带我去公交站牌那儿，告诉我该行走的路线，那时候心里真的很温暖。<br>chapter 2<br>学习计划<br>1.jQuery(四天)<br>2.HTML5（两天）<br>3.CSS3（五天）<br>4.Ajax（四天）<br>5.移动web开发（六天）<br>6.canvas（三天）<br>7.框架（八天）<br>8.主流框架（七天）<br>9.Node.js（七天）<br>给自己的话：希望你能按照自己规定的时间完成这些任务。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;chapter 1&lt;br&gt;关于近来的心情&lt;br&gt;一个人跟我说，你的善良要有锋芒。我思考了很久，的确如此。慢慢的变得越来越沉默，因为很少有人在一起说话了，人和人之间充满了利益感。心有猛虎，细嗅蔷薇。&lt;br&gt;那年，去了临楚话语中的洛阳，看了白马寺的牡丹。在那座城市，让我感受到了
+    
+    </summary>
+    
+    
+      <category term="心情随记" scheme="http://fairyL.com/tags/%E5%BF%83%E6%83%85%E9%9A%8F%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>盒模型</title>
